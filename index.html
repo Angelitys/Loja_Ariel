@@ -1,0 +1,50 @@
+<!--
+Validações:
+Eu verifiqui se todos os campos foram preenchidos antes de adicionar ou atualizar um participante
+O campo "presença" deve ser preenchido com sim ou  não
+O ID é gerado automaticamente e é único para cada participante
+
+Testes:
+Fiz testes manuais pra garantir que dá pra adicionar, editar e excluir participantes direitinho
+Testei também o que acontece quando deixo campos em branco ou coloco dados errados
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Produtos</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Gerenciador de Produtos</h1>
+        <div id="input-container">
+            <input type="text" id="product-name" placeholder="Nome do Produto">
+            <input type="number" id="product-price" placeholder="Preço" step="0.01">
+            <input type="number" id="product-qty" placeholder="Quantidade em Estoque">
+            <button id="add-btn">Adicionar</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Produto</th>
+                    <th>Preço</th>
+                    <th>Estoque</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+        </table>
+        <div id="update-container">
+            <input type="text" id="update-product-name">
+            <input type="number" id="update-product-price" step="0.01">
+            <input type="number" id="update-product-qty">
+            <button id="update-btn">Atualizar</button>
+            <button id="cancel-btn">Cancelar</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
